@@ -1,0 +1,6 @@
+Anjan,Ahmad Raza,2003,3
+Sayad,John Elia,1993,1
+Mathimaticts,Saad Hasan,1800,2
+Tere Naam,Syed Yousuf,2023,5
+Democracct,Ali,2000,3
+Time,Sharyar Azher Sangi,2003,4

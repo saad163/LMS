@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?technology,security') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-align: center;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 10px;
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .btn-custom {
+            width: 100%;
+            background: #ff7e5f;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+            background: #ff4d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🔐 Admin Login</h2>
+        {% if error %}
+        <p class="text-danger">{{ error }}</p>
+        {% endif %}
+        <form action="/admin_login" method="post">
+            <div class="mb-3">
+                <input type="text" name="username" class="form-control" placeholder="Admin Username" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-custom">Login</button>
+        </form>
+        <p class="mt-3"><a href="/">Back to Home</a></p>
+    </div>
+</body>
+</html>
